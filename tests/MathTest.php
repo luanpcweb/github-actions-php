@@ -7,7 +7,7 @@ namespace Tests;
 use App\Math;
 use PHPUnit\Framework\TestCase;
 
-class Math extends TestCase
+class MathTest extends TestCase
 {
     public function test_plus() : void
     {
