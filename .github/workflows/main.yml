@@ -28,5 +28,10 @@ jobs:
       - name: PHP Insights
         run: ./vendor/bin/phpinsights --no-interaction --min-quality=90 --min-complexity=90 --min-architecture=90 --min-style=90
 
+      #- name: Running PHPUnit
+      #  run: ./vendor/bin/phpunit
+
       - name: Running PHPUnit
-        run: php ./vendor/bin/phpunit
+        uses: php-actions/phpunit@v1
+        with:
+          config: ./phpunit.xml
