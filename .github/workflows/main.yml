@@ -35,7 +35,7 @@ jobs:
       - name: PHPUnit tests
         uses: graychen/phpunit-action@v1.0.0
         with:
-         config: test/phpunit/phpunit.xml
+         config: $GITHUB_WORKSPACE/phpunit.xml
 
       # - name: Running PHPUnit
       #   uses: php-actions/phpunit@v1
