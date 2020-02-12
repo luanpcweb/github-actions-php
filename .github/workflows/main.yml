@@ -23,10 +23,10 @@ jobs:
         run: composer install --no-ansi --no-interaction --no-suggest --prefer-dist
 
       - name: Running PHPStan
-        run: ./.github/scripts/run-phpstan.sh
+        run: ./vendor/bin/phpstan analyse src tests --level 7
 
       - name: PHP Insights
-        run: ./.github/scripts/run-phpinsights.sh
+        run: ./vendor/bin/phpinsights --no-interaction --min-quality=90 --min-complexity=90 --min-architecture=90 --min-style=90
 
       - name: Running PHPUnit
-        run: ./.github/scripts/run-phpunit.sh
+        run: ./vendor/bin/phpunit
