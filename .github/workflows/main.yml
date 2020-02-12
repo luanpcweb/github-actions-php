@@ -20,7 +20,7 @@ jobs:
         uses: ./.github/actions/php
 
       - name: Installing Composer
-        run: ./.github/scripts/run-composer.sh
+        run: composer install --no-ansi --no-interaction --no-suggest --prefer-dist
 
       - name: Running PHPStan
         run: ./.github/scripts/run-phpstan.sh
