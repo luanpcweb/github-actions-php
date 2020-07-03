@@ -3,7 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=linux,macos,phpunit,windows,composer,sublimetext,visualstudiocode
 
 ### Composer ###
-composer.phar
+#composer.phar
 /vendor/
 composer.lock
 
