@@ -20,4 +20,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run PHP unit tests
-        run: docker-compose run github-acitons-php ./vendor/bin/phpunit
+        run: docker-compose run github-acitons-php ./vendor/bin/phpunit --configuration=./phpunit.xml
