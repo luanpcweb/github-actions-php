@@ -13,5 +13,5 @@ jobs:
         run: composer install --prefer-dist
 
       - name: Run PHPUnit
-        run: php7.3 vendor/bin/phpunit
+        run: php7.3 vendor/bin/phpunit tests/
 
