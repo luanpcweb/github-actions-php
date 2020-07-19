@@ -1,23 +1,14 @@
 name: CI
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Build
-        run: docker build .
-  unit_tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Run PHP unit tests
-        run: docker-compose run github-acitons-php $*
+      - uses: actions/checkout@v1
+
+      - name: Run PHPUnit
+        run: php7.3 vendor/bin/phpunit
+
